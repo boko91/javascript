@@ -11,22 +11,22 @@ if (computerChoice < .33) {
 } console.log("Computer: " + computerChoice);
 
 var compare = function (userChoice, computerChoice) {
-  if (choice1 === choice2) {
+  if (userChoice === computerChoice) {
     return false;
-  } else if (choice1 === "rock") {
-    if (choice2 === "scissors") {
+  } else if (userChoice === "rock") {
+    if (computerChoice === "scissors") {
       return true;
     } else {
       return false;
     };
-  } else if (choice1 === "paper") {
-    if (choice2 === "rock") {
+  } else if (userChoice === "paper") {
+    if (computerChoice === "rock") {
       return true;
     } else {
       return false;
     };
   } else {
-    if (choice2 === "paper") {
+    if (computerChoice === "paper") {
       return true;
     } else {
       return false;
@@ -34,11 +34,11 @@ var compare = function (userChoice, computerChoice) {
   };
 };
 
-console.log(compare);
+console.log(compare(userChoice, computerChoice));
 
 if (userChoice != ("rock" || "scissors" || "paper")) {
   console.log("Invalid input. User is a dummy. Computer wins.");
-} else if (compare == true) {
+} else if (true) {
     console.log("User wins! Great jeorb!!!");
 } else {
     console.log("Computer wins. Computer grows stronger...");
