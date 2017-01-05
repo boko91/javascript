@@ -38,7 +38,7 @@ console.log(compare(userChoice, computerChoice));
 
 if (userChoice != ("rock" || "scissors" || "paper")) {
   console.log("Invalid input. User is a dummy. Computer wins.");
-} else if (true) {
+} else if (compare(userChoice, computerChoice) == true) {
     console.log("User wins! Great jeorb!!!");
 } else {
     console.log("Computer wins. Computer grows stronger...");
