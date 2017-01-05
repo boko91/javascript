@@ -1,0 +1,267 @@
+You're running JavaScript. To get started, type in the console below or the text editor to the left. Want to learn more about JavaScript? Take Codecademy lessons!
+
+ >>>  SyntaxError: missing ) after argument list
+ >>>  SyntaxError: Unexpected token !=
+ >>>  SyntaxError: Unexpected token !=
+ >>>  SyntaxError: Unexpected identifier
+ >>>  SyntaxError: Illegal return statement
+ >>>  SyntaxError: Unexpected end of input
+ >>>  ReferenceError: userChoicel is not defined
+ >>>  ReferenceError: userChoicel is not defined
+ >>>  Player: rock
+ Computer: paper
+ >>>  SyntaxError: Unexpected identifier
+ >>>  Player: rock
+ Computer: scissors
+ [Function: compare]
+ >>>  SyntaxError: Unexpected identifier
+ >>>  Player: paper
+ Invalid input. User is a dummy. Computer wins.
+ Computer: scissors
+ [Function: compare]
+ >>>  Player: paper
+ Invalid input. User is a dummy. Computer wins.
+ Computer: rock
+ [Function: compare]
+ >>>  Player: rock
+ Computer: scissors
+ >>>  Player: rock
+ Computer: scissors
+ => [Function: compare]
+ >>>  Player: rock
+ Computer: paper
+ >>>  SyntaxError: Unexpected identifier
+ >>>  Player: rock
+ Computer: paper
+ >>>  Player: rock
+ Computer: rock
+ >>>  Player: rock
+ Computer: paper
+ >>>  Player: bum
+ Invalid input. User is a dummy. Computer wins.
+ Computer: rock
+ >>>  Player: squirrel
+ Computer: rock
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: squirrel
+ Computer: rock
+ Invalid input. User is a dummy. Computer wins.
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: paper
+ Computer wins. Computer grows stronger...
+ >>>  Player: paper
+ Computer: scissors
+ Invalid input. User is a dummy. Computer wins.
+ Computer wins. Computer grows stronger...
+ >>>  Player: scissors
+ Computer: paper
+ Invalid input. User is a dummy. Computer wins.
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: paper
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: scissors
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: paper
+ [Function: compare]
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ [Function: compare]
+ User wins! Great jeorb!!!
+ >>>  Player: square
+ Computer: rock
+ Invalid input. User is a dummy. Computer wins.
+ [Function: compare]
+ User wins! Great jeorb!!!
+ >>>  SyntaxError: Unexpected token else
+ >>>  SyntaxError: Unexpected token else
+ >>>  Player: rock
+ Computer: scissors
+ [Function: compare]
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: scissors
+ [Function: compare]
+ User wins! Great jeorb!!!
+ >>>  Player: a
+ Computer: scissors
+ [Function: compare]
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: rock
+ Computer: scissors
+ [Function: compare]
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ [Function: compare]
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: rock
+ [Function: compare]
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: rock
+ ReferenceError: choice1 is not defined
+ >>>  Player: rock
+ Computer: scissors
+ true
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: rock
+ User wins! Great jeorb!!!
+ >>>  >>>  Player: rock
+ Computer: paper
+ [Function: compare]
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: rock
+ false
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: paper
+ false
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: paper
+ false
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ false
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: paper
+ false
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ Tie. Play again.
+ Computer wins. Computer grows stronger...
+ >>>  SyntaxError: Unexpected token }
+ >>>  Player: rock
+ Computer: rock
+ Tie. Play again.
+ >>>  Player: rocks
+ Computer: paper
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: rock
+ Computer: paper
+ false
+ >>>  Player: rock
+ Computer: paper
+ 4
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ 1
+ Tie. Play again.
+ >>>  Player: wonder
+ Computer: rock
+ 0
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: paper
+ Computer: rock
+ 0
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: scissors
+ Computer: scissors
+ 0
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: rock
+ Computer: paper
+ 4
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ 1
+ Tie. Play again.
+ >>>  Player: rock
+ Computer: paper
+ 4
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ 1
+ Tie. Play again.
+ >>>  Player: rock
+ Computer: scissors
+ 3
+ Computer wins. Computer grows stronger...
+ >>>  Player: null
+ Computer: paper
+ 0
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: rock
+ Computer: rock
+ 1
+ Tie. Play again.
+ >>>  Player: rock
+ Computer: paper
+ 3
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: paper
+ 3
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: scissors
+ 2
+ User wins! Great jeorb!!!
+ >>>  Player: scissors
+ Computer: paper
+ 0
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: rock
+ Computer: paper
+ 3
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: rock
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: scissors
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: paper
+ Computer wins. Computer grows stronger...
+ >>>  Player: rock
+ Computer: scissors
+ User wins! Great jeorb!!!
+ >>>  Player: rock
+ Computer: rock
+ Tie. Play again.
+ >>>  Player: rook
+ Computer: paper
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: scissors
+ Computer: rock
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: scissors
+ Computer: rock
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: rock
+ Computer: scissors
+ User wins! Great jeorb!!!
+ >>>  Player: paper
+ Computer: scissors
+ Invalid input. User is a dummy. Computer wins.
+ >>>  Player: paper
+ Computer: scissors
+ Invalid input. User is a dummy. Computer wins.
+ >>>  SyntaxError: Unexpected token )
+ >>>  Player: paper
+ Computer: paper
+ Tie. Play again.
+ >>>  Player: paper
+ Computer: scissors
+ Computer wins. Computer grows stronger...
+ >>>  Player: scissors
+ Computer: paper
+ User wins! Great jeorb!!!
