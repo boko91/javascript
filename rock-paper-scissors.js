@@ -11,34 +11,39 @@ if (computerChoice < .33) {
 } console.log("Computer: " + computerChoice);
 
 var compare = function (userChoice, computerChoice) {
-  if (userChoice === computerChoice) {
-    return false;
+  if (userChoice != ("rock" || "scissors" || "paper")) {
+    return 0;
+  } else if (userChoice === computerChoice) {
+      return 1;
   } else if (userChoice === "rock") {
     if (computerChoice === "scissors") {
-      return true;
+      return 2;
     } else {
-      return false;
+      return 3;
     };
   } else if (userChoice === "paper") {
     if (computerChoice === "rock") {
-      return true;
+      return 2;
     } else {
-      return false;
+      return 3;
     };
   } else {
     if (computerChoice === "paper") {
-      return true;
+      return 2;
     } else {
-      return false;
+      return 3;
     };
   };
 };
 
-console.log(compare(userChoice, computerChoice));
+result = compare (userChoice, computerChoice);
+console.log(result);
 
-if (userChoice != ("rock" || "scissors" || "paper")) {
-  console.log("Invalid input. User is a dummy. Computer wins.");
-} else if (compare(userChoice, computerChoice) == true) {
+if (result == 0) {
+    console.log("Invalid input. User is a dummy. Computer wins.");
+} else if (result == 1) {
+    console.log("Tie. Play again.");
+} else if (result == 2) {
     console.log("User wins! Great jeorb!!!");
 } else {
     console.log("Computer wins. Computer grows stronger...");
