@@ -1,3 +1,5 @@
+//plug into http://labs.codecademy.com/#:workspace to test
+
 var userChoice = prompt("Do you choose rock, paper, or scissors?");
 console.log("Player: " + userChoice);
 
