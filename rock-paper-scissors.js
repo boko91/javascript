@@ -1,5 +1,12 @@
 //plug into http://labs.codecademy.com/#:workspace to test
 
+/*next steps:
+1) Multiple Play
+2) Continue play?
+3) Keep score
+4) Credit system
+*/
+
 var userChoice = prompt("Do you choose rock, paper, or scissors?");
 console.log("Player: " + userChoice);
 
