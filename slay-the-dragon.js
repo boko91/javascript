@@ -1,3 +1,5 @@
+//plug into http://labs.codecademy.com/#:workspace to test
+
 var slaying = true;
 
 var youHit = Math.floor(Math.random() * 2);
@@ -7,7 +9,7 @@ var damageThisRound = Math.floor(Math.random()*5 + 1);
 totalDamage = 0;
 
 while (slaying) {
-    if (youHit = true) {
+    if (youHit) {
         totalDamage += damageThisRound;
         console.log("You hit the dragon for " + damageThisRound + " damage. It roars in rage.");
         if (totalDamage >= 20) {
@@ -17,8 +19,10 @@ while (slaying) {
         } else {
             youHit = Math.floor(Math.random() * 2);
             damageThisRound = Math.floor(Math.random()*5 + 1);
+            console.log(youHit);
         };
     } else {
         console.log("You missed the dragon, and stabbed yourself in the torso. You are dead.");
+        slaying = false;
     };
 };
