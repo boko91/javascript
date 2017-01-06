@@ -23,7 +23,7 @@ while (slaying) {
         console.log("You hit the dragon in the " + bodyParts[bodySelect] + " for " + damageThisRound + " damage. It roars in rage.");
         if (totalDamage >= 20) {
             console.log("The dragon has taken fatal damage. It lets out a smoky final breath. It collapses.");
-            console.log("You have slain the dragon, mighty hero!")
+            console.log("You have slain the dragon, mighty adventurer! Your booty awaits.")
             slaying = false;
         } else {
             youHit = Math.floor(Math.random() * 2);
