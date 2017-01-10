@@ -1,27 +1,44 @@
-var compare = function (userChoice, computerChoice) {
-  if (userChoice == "rock" || userChoice == "scissors" || userChoice == "paper") {
-    if (userChoice === computerChoice) {
-      return 1;
-    } else if (userChoice === "rock") {
-      if (computerChoice === "scissors") {
-        return 2;
-      } else {
-        return 3;
-      };
-    } else if (userChoice === "paper") {
-      if (computerChoice === "rock") {
-        return 2;
-      } else {
-        return 3;
-      };
+//plug into http://labs.codecademy.com/#:workspace to test
+
+console.log("Mighty adventurer: Slay the Dragon!");
+
+var slaying = true;
+
+var youHit = Math.floor(Math.random() * 2);
+
+var damageThisRound = Math.floor(Math.random()*5 + 1);
+
+var totalDamage = 0;
+
+var playerDamage = 0;
+
+var bodyParts = ["head", "chest", "pinky toe", "spleen", "buttocks", "tail", "liver", "funny bone"]
+
+var bodySelect = Math.floor(Math.random() * bodyParts.length);
+
+while (slaying) {
+    if (youHit) {
+        totalDamage += damageThisRound;
+        bodySelect = Math.floor(Math.random() * bodyParts.length);
+        console.log("You hit the dragon in the " + bodyParts[bodySelect] + " for " + damageThisRound + " damage. It roars in rage.");
+        if (totalDamage >= 20) {
+            console.log("The dragon has taken fatal damage. It lets out a smoky final breath. It collapses.");
+            console.log("You have slain the dragon, mighty hero!")
+            slaying = false;
+        } else {
+            youHit = Math.floor(Math.random() * 2);
+            damageThisRound = Math.floor(Math.random()*5 + 1);
+        };
     } else {
-      if (computerChoice === "paper") {
-        return 2;
-      } else {
-        return 3;
-      };
+        playerDamage += damageThisRound;
+        bodySelect = Math.floor(Math.random() * bodyParts.length);
+        console.log("You missed the dragon. The dragon slashes you in the " + bodyParts[bodySelect] + " for " + damageThisRound + " damage.");
+        if (playerDamage >= 20) {
+            console.log("You have lost too many limbs. You are dead.")
+            slaying = false;
+        } else {
+            youHit = Math.floor(Math.random() * 2);
+            damageThisRound = Math.floor(Math.random()*5 + 1);
+        };
     };
-  } else {
-    return 0;
-  };
 };
