@@ -11,6 +11,4 @@ var reverseString = function(stringInput) {
   };
 };
 
-reverseString("Button");
-reverseString("Bourbon Street");
 reverseString(prompt("What would you like reversed?"));
