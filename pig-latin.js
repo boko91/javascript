@@ -12,12 +12,22 @@
 5) Punctuations must still conclude sentences.
 */
 
+var vowelCheck = function (x) {
+    x = x.toUpperCase();
+    var result = (x == "A") || (x == "E") || (x == "I") || (x == "O") || (x == "U");
+    return result;
+};
 
 var pigLatin = function(input) {
   var pigArray = input.split(" ");
+  var newPigArray = [];
+  var vowels = ['a', 'b', 'c', 'd', 'e'];
     for (var i = 0; i < pigArray.length; i++ ) {
-      console.log(pigArray[i].charAt(0));
+      //console.log(pigArray[i].charAt(0));
+      //newPigArray.push(pigArray[i]);
+
     }
+    //return newPigArray;
 };
 
 pigLatin("Happy New Year!");
