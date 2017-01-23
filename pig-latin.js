@@ -24,8 +24,6 @@ var vowelCheck = function (x) {
     return result;
 };
 
-
-
 var pigLatin = function(input) {
   var pigArray = input.split(" ");
   //console.log(pigArray);
@@ -39,11 +37,13 @@ var pigLatin = function(input) {
                 var tempChar = [];
                 while (vowelCheck(tempArray[0]) != true) {
                     tempChar.push(tempArray[0]);
-                    console.log(tempChar);
                     tempArray.splice(0,1);
                 }
                 tempArray.splice(tempArray.length, 0);
-                tempArray.splice(tempArray.length, 0, tempChar)
+                tempChar = tempChar.join("");
+                console.log(tempChar);
+                tempArray.splice(tempArray.length, 0, "-", tempChar, "ay")
+                //console.log(tempArray);
             } pigArray[i] = tempArray.join("");
     }
     pigArray = pigArray.join(" ");
