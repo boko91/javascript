@@ -14,6 +14,8 @@
         take multiple first letters, print remaining word, add hyphen, add first letters, add "ay"
 6) Proper capitalization
     If a given word is capitalized, caps should transfer to beginning of pig latin word.
+    If all lower, return all lower; if single cap, return single cap; if all caps, return all caps.
+    If partially cap, return same count of partial caps. (same index should remain caps)
 7) Punctuations must still conclude sentences.
     i) define punctuation (".", ",", "?", "!", "'", '"')
 */
@@ -24,6 +26,15 @@ var vowelCheck = function (x) {
     return result;
 };
 
+var capsTest = function (input) {
+    var capsCount = []
+    for (var j = 0; j < input.length; j++) {
+        var result = input[j] === input[j].toUpperCase();
+        capsCount.push(result);
+    }
+    return capsCount;
+};
+
 var pigLatin = function(input) {
   var pigArray = input.split(" "); //splits input string into words
   //console.log(pigArray);
@@ -31,6 +42,7 @@ var pigLatin = function(input) {
         var tempArray = pigArray[i].split(""); // splits each word into array
         //console.log(tempArray);
         //console.log(vowelCheck(tempArray[0]));
+        var capsCount = []
             if (vowelCheck(tempArray[0]) === true) {
                 tempArray.splice(tempArray.length, 0, "-way"); // vowel latin
             } else {
