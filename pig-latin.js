@@ -2,14 +2,15 @@
 1) Take an input
 2) Each word must be transformed separately: divide the string by words
 3) Figure out how to sort vowels and consonants
-4) Three different types of words to consider:
+4) Figure out how to take and analyze the first letter
+5) Three different types of words to consider:
   i) Consonants - "pig" becomes "ig-pay"
         remove first letter, print remaining word, add hyphen, add first letter, add "ay"
   ii) Compound consonants - "cheer" becomes "eer-chay"
         take multiple first letters (pre-vowel), print remaining word, add hyphen, add first letters, add "ay"
   iii) Vowel - "apple" becomes "apple-ay"
         print word, add hyphen, add "way"
-5) Punctuations must still conclude sentences.
+6) Punctuations must still conclude sentences.
 */
 
 var vowelCheck = function (x) {
@@ -21,15 +22,16 @@ var vowelCheck = function (x) {
 var pigLatin = function(input) {
   var pigArray = input.split(" ");
   var newPigArray = [];
-  var vowels = ['a', 'b', 'c', 'd', 'e'];
     for (var i = 0; i < pigArray.length; i++ ) {
-      //console.log(pigArray[i].charAt(0));
-      //newPigArray.push(pigArray[i]);
-
+        var tempArray = pigArray[i].split("");
+        tempArray.splice(tempArray.length, 0, "-", tempArray[0], "ay" );
+        tempArray.splice(0,1);
+        pigArray[i] = tempArray.join("");
     }
-    //return newPigArray;
+    pigArray = pigArray.join(" ");
+    return pigArray;
 };
 
-pigLatin("Happy New Year!");
+pigLatin("Cheery New Year Anne!");
 
 //pigLatin(prompt("What would you like pig latin-ified?"));
