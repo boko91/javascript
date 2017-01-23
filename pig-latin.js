@@ -25,28 +25,27 @@ var vowelCheck = function (x) {
 };
 
 var pigLatin = function(input) {
-  var pigArray = input.split(" ");
+  var pigArray = input.split(" "); //splits input string into words
   //console.log(pigArray);
     for (var i = 0; i < pigArray.length; i++ ) {
-        var tempArray = pigArray[i].split("");
+        var tempArray = pigArray[i].split(""); // splits each word into array
         //console.log(tempArray);
         //console.log(vowelCheck(tempArray[0]));
             if (vowelCheck(tempArray[0]) === true) {
-                tempArray.splice(tempArray.length, 0, "-way");
+                tempArray.splice(tempArray.length, 0, "-way"); // vowel latin
             } else {
-                var tempChar = [];
+                var tempChar = []; // holds multi-consonant clusters
                 while (vowelCheck(tempArray[0]) != true) {
                     tempChar.push(tempArray[0]);
                     tempArray.splice(0,1);
                 }
-                tempArray.splice(tempArray.length, 0);
-                tempChar = tempChar.join("");
-                console.log(tempChar);
-                tempArray.splice(tempArray.length, 0, "-", tempChar, "ay")
+                tempChar = tempChar.join(""); // converts cluster array into string
+                //console.log(tempChar);
+                tempArray.splice(tempArray.length, 0, "-", tempChar, "ay") // consonant latin
                 //console.log(tempArray);
-            } pigArray[i] = tempArray.join("");
+            } pigArray[i] = tempArray.join(""); // final word output
     }
-    pigArray = pigArray.join(" ");
+    pigArray = pigArray.join(" "); // final total output
     return pigArray;
 };
 
