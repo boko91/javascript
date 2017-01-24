@@ -38,23 +38,31 @@ var pigLatin = function(input) {
             var output = tempArray[j] === tempArray[j].toUpperCase();
             capsCount.push(output);
         };
-        console.log(capsCount);
-            if (vowelCheck(tempArray[0]) === true) {
+        //console.log(capsCount);
+            if (vowelCheck(tempArray[0])) {
                 tempArray.splice(tempArray.length, 0, "way"); // vowel latin
             } else {
                 //var tempChar = []; // holds multi-consonant clusters
-                while (vowelCheck(tempArray[0]) != true) {
+                while (!vowelCheck(tempArray[0])) {
+                    if (tempArray[0] == "q" || tempArray[0] == "Q") {
+                        var tempChar = tempArray.slice(0,2);
+                        //console.log(tempChar);
+                        tempArray.splice(0,2);
+                        tempArray.splice(tempArray.length, 0, tempChar.join(""));
+                    } else {
                     var tempChar = tempArray[0];
+                    //console.log(tempChar);
                     //tempChar.push(tempArray[0]);
                     tempArray.splice(0,1);
-                    tempArray.splice(tempArray.length, 0, tempChar)
+                    tempArray.splice(tempArray.length, 0, tempChar);
+                    }
                 }
                 //tempChar = tempChar.join(""); // converts cluster array into string
                 //console.log(tempChar);
                 tempArray.splice(tempArray.length, 0, "ay") // consonant latin
                 //console.log(tempArray);
             }
-        console.log(tempArray);
+        //console.log(tempArray);
         for (var j = 0; j < capsCount.length; j++) {
             if (capsCount[j]) {
                 tempArray[j] = tempArray[j].toUpperCase();
@@ -68,6 +76,6 @@ var pigLatin = function(input) {
     return pigArray;
 };
 
-pigLatin("Screechy New Year Anne");
+pigLatin("Screechy Quaint Year Squid");
 
 //pigLatin(prompt("What would you like pig latin-ified?"));
