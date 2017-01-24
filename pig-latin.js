@@ -38,25 +38,29 @@ var pigLatin = function(input) {
             var output = tempArray[j] === tempArray[j].toUpperCase();
             capsCount.push(output);
         };
-        //console.log(capsCount);
+        console.log(capsCount);
             if (vowelCheck(tempArray[0]) === true) {
-                tempArray.splice(tempArray.length, 0, "-way"); // vowel latin
+                tempArray.splice(tempArray.length, 0, "way"); // vowel latin
             } else {
-                var tempChar = []; // holds multi-consonant clusters
+                //var tempChar = []; // holds multi-consonant clusters
                 while (vowelCheck(tempArray[0]) != true) {
-                    tempChar.push(tempArray[0]);
+                    var tempChar = tempArray[0];
+                    //tempChar.push(tempArray[0]);
                     tempArray.splice(0,1);
+                    tempArray.splice(tempArray.length, 0, tempChar)
                 }
-                tempChar = tempChar.join(""); // converts cluster array into string
+                //tempChar = tempChar.join(""); // converts cluster array into string
                 //console.log(tempChar);
-                tempArray.splice(tempArray.length, 0, "-", tempChar, "ay") // consonant latin
+                tempArray.splice(tempArray.length, 0, "ay") // consonant latin
                 //console.log(tempArray);
             }
         console.log(tempArray);
         for (var j = 0; j < capsCount.length; j++) {
-            if (capsCount[j] === true) {
+            if (capsCount[j]) {
                 tempArray[j] = tempArray[j].toUpperCase();
-            };
+            } else {
+                tempArray[j] = tempArray[j].toLowerCase();
+            }
         };
             pigArray[i] = tempArray.join(""); // final word output
     };
