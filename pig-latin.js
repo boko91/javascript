@@ -27,6 +27,8 @@ var vowelCheck = function (x) {
     return result;
 };
 
+//var puncList = [".", ",", "?", "!", "'", '"'];
+
 var pigLatin = function(input) {
   var pigArray = input.split(" "); //splits input string into words
   //console.log(pigArray);
@@ -40,13 +42,13 @@ var pigLatin = function(input) {
             capsCount.push(output);
         };
         //console.log(capsCount);
-        var puncStor = []
-        for (var k = 0; k < tempArray.length; k++) {
-            if (tempArray[k] != /^[A-Z]+$/i) {
+        /*var puncStor = []
+        while (tempArray[k] ) {
+            if ({
                 puncStor.push(tempArray[k]);
                 tempArray.splice(tempArray[k], 1);
             };
-        }
+        } */
         if (vowelCheck(tempArray[0])) {
             tempArray.splice(tempArray.length, 0, "way"); // vowel latin
         } else {
@@ -76,7 +78,7 @@ var pigLatin = function(input) {
                 tempArray[j] = tempArray[j].toLowerCase();
             };
         };
-            tempArray.push(puncStor.join(""));
+            //tempArray.push(puncStor.join(""));
             pigArray[i] = tempArray.join(""); // final word output
     };
     pigArray = pigArray.join(" "); // final total output
