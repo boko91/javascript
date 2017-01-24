@@ -26,15 +26,6 @@ var vowelCheck = function (x) {
     return result;
 };
 
-var capsTest = function (input) {
-    var capsCount = []
-    for (var j = 0; j < input.length; j++) {
-        var result = input[j] === input[j].toUpperCase();
-        capsCount.push(result);
-    }
-    return capsCount;
-};
-
 var pigLatin = function(input) {
   var pigArray = input.split(" "); //splits input string into words
   //console.log(pigArray);
@@ -42,7 +33,12 @@ var pigLatin = function(input) {
         var tempArray = pigArray[i].split(""); // splits each word into array
         //console.log(tempArray);
         //console.log(vowelCheck(tempArray[0]));
-        var capsCount = []
+        var capsCount = [] //contains boolean for each letter index
+        for (var j = 0; j < tempArray.length; j++) { //records cap status of each letter
+            var output = tempArray[j] === tempArray[j].toUpperCase();
+            capsCount.push(output);
+        };
+        //console.log(capsCount);
             if (vowelCheck(tempArray[0]) === true) {
                 tempArray.splice(tempArray.length, 0, "-way"); // vowel latin
             } else {
@@ -55,8 +51,15 @@ var pigLatin = function(input) {
                 //console.log(tempChar);
                 tempArray.splice(tempArray.length, 0, "-", tempChar, "ay") // consonant latin
                 //console.log(tempArray);
-            } pigArray[i] = tempArray.join(""); // final word output
-    }
+            }
+        console.log(tempArray);
+        for (var j = 0; j < capsCount.length; j++) {
+            if (capsCount[j] === true) {
+                tempArray[j] = tempArray[j].toUpperCase();
+            };
+        };
+            pigArray[i] = tempArray.join(""); // final word output
+    };
     pigArray = pigArray.join(" "); // final total output
     return pigArray;
 };
