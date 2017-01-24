@@ -18,6 +18,7 @@
     If partially cap, return same count of partial caps. (same index should remain caps)
 7) Punctuations must still conclude sentences.
     i) define punctuation (".", ",", "?", "!", "'", '"')
+8) Hyphens inserted between words
 */
 
 var vowelCheck = function (x) {
@@ -39,25 +40,30 @@ var pigLatin = function(input) {
             capsCount.push(output);
         };
         //console.log(capsCount);
-            if (vowelCheck(tempArray[0])) {
-                tempArray.splice(tempArray.length, 0, "way"); // vowel latin
-            } else {
-                //var tempChar = []; // holds multi-consonant clusters
-                while (!vowelCheck(tempArray[0])) {
-                    if (tempArray[0] == "q" || tempArray[0] == "Q") {
-                        var tempChar = tempArray.slice(0,2);
-                        //console.log(tempChar);
-                        tempArray.splice(0,2);
-                        tempArray.splice(tempArray.length, 0, tempChar.join(""));
-                    } else {
+        var puncStor = []
+        for (var k = 0; k < tempArray.length; k++) {
+            if (tempArray[k] != /^[A-Z]+$/i) {
+                puncStor.push(tempArray[k]);
+                tempArray.splice(tempArray[k], 1);
+            };
+        }
+        if (vowelCheck(tempArray[0])) {
+            tempArray.splice(tempArray.length, 0, "way"); // vowel latin
+        } else {
+            //var tempChar = []; // holds multi-consonant clusters
+            while (!vowelCheck(tempArray[0])) {
+                if (tempArray[0] == "q" || tempArray[0] == "Q") {
+                    var tempChar = tempArray.slice(0,2);
+                    //console.log(tempChar);
+                    tempArray.splice(0,2);
+                    tempArray.splice(tempArray.length, 0, tempChar.join(""));
+                } else {
                     var tempChar = tempArray[0];
                     //console.log(tempChar);
-                    //tempChar.push(tempArray[0]);
                     tempArray.splice(0,1);
                     tempArray.splice(tempArray.length, 0, tempChar);
                     }
                 }
-                //tempChar = tempChar.join(""); // converts cluster array into string
                 //console.log(tempChar);
                 tempArray.splice(tempArray.length, 0, "ay") // consonant latin
                 //console.log(tempArray);
@@ -68,14 +74,15 @@ var pigLatin = function(input) {
                 tempArray[j] = tempArray[j].toUpperCase();
             } else {
                 tempArray[j] = tempArray[j].toLowerCase();
-            }
+            };
         };
+            tempArray.push(puncStor.join(""));
             pigArray[i] = tempArray.join(""); // final word output
     };
     pigArray = pigArray.join(" "); // final total output
     return pigArray;
 };
 
-pigLatin("Screechy Quaint Year Squid");
+pigLatin("Screechy QUAINT Year, ain't that the case?? Squiddy darling!!!");
 
 //pigLatin(prompt("What would you like pig latin-ified?"));
